@@ -22,6 +22,11 @@ export const listBoard = defineStore("listBoard", {
     getAlll() {
       return this.lists;
     },
+    getIdBoard() {
+      return this.lists.map(function (dato) {
+        return dato.id;
+      });
+    },
   },
   actions: {
     addBoard(name) {
