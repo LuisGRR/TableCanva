@@ -1,0 +1,21 @@
+/* Theme Lights */
+.btnLight1 {
+  background-color: var(--theme1ColorPrimary);
+}
+.btnLight2 {
+  background-color: var(--themelight2ColorPrimary);
+}
+.btnLight3 {
+  background-color: var(--themelight3ColorQuaternary);
+}
+
+/* Theme Darks */
+.btnDark1 {
+  background-color: var(--theme2ColorSecondary);
+}
+.btnDark2 {
+  background-color: var(--themedark2ColorPrimary);
+}
+.btnDark3 {
+  background-color: var(--themedark3ColorPrimary);
+}

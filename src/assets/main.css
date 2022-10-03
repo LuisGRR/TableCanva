@@ -1,0 +1,612 @@
+@import url(./ColorsThemes.css);
+
+@import url(./fuentes.css);
+
+@import url(./estilosBtnThemas.css);
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto-Condesen";
+}
+
+html {
+  background: var(--themeWhite);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 46px;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: var(--theme1ColorPrimary);
+}
+.contetHeader {
+  padding: 0px;
+  transition: all 0.6s ease;
+
+  border-bottom: 2px solid var(--theme1ColorPrimary);
+}
+
+.contenedorBtnTemas {
+  width: 100%;
+  height: 2em;
+  display: flex;
+  padding: 1em 0;
+  justify-content: space-between;
+  border-top: 1px solid var(--theme1ColorSecondary);
+  border-bottom: 1px solid var(--theme1ColorSecondary);
+}
+
+.btnTheme {
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 35px;
+}
+
+.contendAddControls {
+  width: 80%;
+  height: 2em;
+  padding: 1em 0;
+}
+.contendAddControls form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 2em;
+}
+.contendAddControls form input {
+  flex-basis: 60%;
+}
+
+.contendAddControls form button {
+  flex-basis: 30%;
+}
+
+.btnsBoards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnMostrarAcciones {
+  position: relative;
+  padding: 1em 1.5em;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin: 1em 0.8em;
+  color: #000;
+}
+
+.btnMostrarAcciones:after,
+.btnMostrarAcciones::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--theme1ColorSecondary);
+  transition: all 0.3s ease;
+  transform: scale(0.85);
+}
+
+.btnMostrarAcciones:hover:before {
+  top: 0;
+  transform: scale(1);
+}
+.btnMostrarAcciones:hover:after {
+  transform: scale(1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  min-height: 350px;
+}
+
+.heightBoard {
+  min-height: 350px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2em;
+  background: var(--theme1ColorPrimary);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.6s ease;
+}
+
+.heightSettings {
+  height: 150px;
+}
+.controlsIzq {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.controlsDer {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.board {
+  width: 250px;
+  min-height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.headerBoard {
+  background: var(--theme1ColorQuaternary);
+  display: flex;
+  flex-direction: column;
+  height: 155px;
+  transition: all 0.6s ease;
+}
+
+.contentBoardHeader {
+  width: 100%;
+}
+.titleBoard {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+}
+.contenteTitle {
+  flex-basis: 90%;
+}
+
+.btnsTitle {
+  flex-basis: 10%;
+}
+
+.addFormItem {
+  margin: 10px 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.addFormItem form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addFormItem form input {
+  flex-basis: 70%;
+}
+
+.addFormItem form button {
+  flex-basis: 25%;
+}
+
+.btnSumit {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+}
+
+.btnSumit::after,
+.btnSumit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+.btnSumit::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: var(--theme1ColorSecondary);
+  border-right-color: var(--theme1ColorSecondary);
+}
+.btnSumit::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: var(--theme1ColorSecondary);
+  border-left-color: var(--theme1ColorSecondary);
+}
+.btnSumit:hover:after,
+.btnSumit:hover:before {
+  width: 100%;
+  height: 100%;
+}
+
+.customInput {
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background: var(--themeWhite);
+  border-bottom: 2px solid var(--theme1ColorSecondary);
+  transition: 180ms all ease-in-out;
+}
+
+.customInput:focus {
+  box-shadow: 0 0 0 1px var(--theme1ColorSecondary);
+  border-bottom: 3px solid var(--theme1ColorSecondary);
+}
+
+.btnDelete {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.btnDelete::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  left: 0;
+  background-color: var(--theme1ColorQuaternary);
+  transition: width 0.3s ease-in-out;
+}
+.btnDelete::after {
+  bottom: 0;
+}
+
+.btnDelete:hover::after {
+  width: 100%;
+}
+
+.footer {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-board {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* Thema light 2 */
+html.light2 {
+  background: var(--themeWhite);
+  color: var(--themeBlack);
+  transition: all 0.6s ease;
+}
+html.light2 a {
+  color: var(--themelight2ColorPrimary);
+}
+
+html.light2 .contetHeader {
+  border-bottom: 2px solid var(--themelight2ColorPrimary);
+  transition: all 0.6s ease;
+}
+
+html.light2 .contenedorBtnTemas {
+  border-top: 1px solid var(--themelight2ColorSecondary);
+  border-bottom: 1px solid var(--themelight2ColorSecondary);
+}
+
+html.light2 .btnMostrarAcciones:after,
+html.light2 .btnMostrarAcciones::before {
+  background-color: var(--themelight2ColorTertiary);
+}
+
+html.light2 .contents {
+  background: var(--themelight2ColorPrimary);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.6s ease;
+}
+html.light2 .headerBoard {
+  background: var(--themelight2ColorQuaternary);
+  transition: all 0.6s ease;
+}
+
+html.light2 .btnSumit::after {
+  border-bottom-color: var(--themelight2ColorTertiary);
+  border-right-color: var(--themelight2ColorTertiary);
+}
+html.light2 .btnSumit::before {
+  border-top-color: var(--themelight2ColorTertiary);
+  border-left-color: var(--themelight2ColorTertiary);
+}
+
+html.light2 .customInput {
+  background: var(--themeWhite);
+  border-bottom: 2px solid var(--themelight2ColorTertiary);
+}
+
+html.light2 .customInput:focus {
+  box-shadow: 0 0 0 1px var(--themelight2ColorTertiary);
+  border-bottom: 3px solid var(--themelight2ColorTertiary);
+}
+
+html.light2 .btnDelete::after {
+  background-color: var(--themelight2ColorQuaternary);
+}
+
+/* Thema light 3 */
+html.light3 {
+  background: var(--themeWhite);
+  color: var(--themeBlack);
+  transition: all 0.6s ease;
+}
+html.light3 a {
+  color: var(--themelight3ColorQuaternary);
+}
+
+html.light3 .contetHeader {
+  border-bottom: 2px solid var(--themelight3ColorQuaternary);
+  transition: all 0.6s ease;
+}
+
+html.light3 .contenedorBtnTemas {
+  border-top: 1px solid var(--themelight3ColorTertiary);
+  border-bottom: 1px solid var(--themelight3ColorTertiary);
+}
+
+html.light3 .btnMostrarAcciones:after,
+html.light3 .btnMostrarAcciones::before {
+  background-color: var(--themelight3ColorTertiary);
+}
+
+html.light3 .contents {
+  background: var(--themelight3ColorQuaternary);
+  transition: all 0.6s ease;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+html.light3 .headerBoard {
+  background: var(--themelight3ColorSecondary);
+  transition: all 0.6s ease;
+}
+
+html.light3 .btnSumit::after {
+  border-bottom-color: var(--themelight3ColorTertiary);
+  border-right-color: var(--themelight3ColorTertiary);
+}
+html.light3 .btnSumit::before {
+  border-top-color: var(--themelight3ColorTertiary);
+  border-left-color: var(--themelight3ColorTertiary);
+}
+
+html.light3 .customInput {
+  background: var(--themeWhite);
+  border-bottom: 2px solid var(--themelight3ColorTertiary);
+}
+
+html.light3 .customInput:focus {
+  box-shadow: 0 0 0 1px var(--themelight3ColorTertiary);
+  border-bottom: 3px solid var(--themelight3ColorTertiary);
+}
+
+html.light3 .btnDelete::after {
+  background-color: var(--themelight3ColorQuaternary);
+}
+
+/* themeBlack1 */
+html.dark {
+  background: var(--themeBlack);
+  color: var(--themeWhite);
+  transition: all 0.6s ease;
+}
+html.dark a {
+  color: var(--theme2ColorTertiary);
+}
+
+html.dark .contetHeader {
+  border-bottom: 2px solid var(--theme2ColorSecondary);
+  transition: all 0.6s ease;
+}
+
+html.dark .contenedorBtnTemas {
+  border-top: 1px solid var(--theme2ColorTertiary);
+  border-bottom: 1px solid var(--theme2ColorTertiary);
+}
+
+html.dark .btnMostrarAcciones:after,
+html.dark .btnMostrarAcciones::before {
+  background-color: var(--theme2ColorQuaternary);
+}
+
+html.dark .contents {
+  background: var(--theme2ColorSecondary);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.6s ease;
+}
+html.dark .headerBoard {
+  background: var(--theme2ColorPrimary);
+  transition: all 0.6s ease;
+}
+
+html.dark .btnSumit::after {
+  border-bottom-color: var(--theme2ColorTertiary);
+  border-right-color: var(--theme2ColorTertiary);
+}
+html.dark .btnSumit::before {
+  border-top-color: var(--theme2ColorTertiary);
+  border-left-color: var(--theme2ColorTertiary);
+}
+
+html.dark .customInput {
+  background: var(--themeBlack);
+  border-bottom: 2px solid var(--theme2ColorTertiary);
+}
+
+html.dark .customInput:focus {
+  box-shadow: 0 0 0 1px var(--theme2ColorTertiary);
+  color: var(--themeWhite);
+
+  border-bottom: 3px solid var(--theme2ColorTertiary);
+}
+
+html.dark .btnDelete::after {
+  background-color: var(--theme2ColorQuaternary);
+}
+
+/* dark2 */
+html.dark2 {
+  background: var(--themeBlack);
+  color: var(--themeWhite);
+  transition: all 0.6s ease;
+}
+html.dark2 a {
+  color: var(--themedark2ColorQuaternary);
+}
+
+html.dark2 .contetHeader {
+  border-bottom: 2px solid var(--themedark2ColorTertiary);
+  transition: all 0.6s ease;
+}
+
+html.dark2 .contenedorBtnTemas {
+  border-top: 1px solid var(--themedark2ColorQuaternary);
+  border-bottom: 1px solid var(--themedark2ColorQuaternary);
+}
+
+html.dark2 .btnMostrarAcciones:after,
+html.dark2 .btnMostrarAcciones::before {
+  background-color: var(--themedark2ColorQuaternary);
+}
+
+html.dark2 .contents {
+  background: var(--themedark2ColorPrimary);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.6s ease;
+}
+html.dark2 .headerBoard {
+  background: var(--themedark2ColorTertiary);
+  transition: all 0.6s ease;
+}
+
+html.dark2 .btnSumit::after {
+  border-bottom-color: var(--themedark2ColorQuaternary);
+  border-right-color: var(--themedark2ColorQuaternary);
+}
+html.dark2 .btnSumit::before {
+  border-top-color: var(--themedark2ColorQuaternary);
+  border-left-color: var(--themedark2ColorQuaternary);
+}
+
+html.dark2 .customInput {
+  background: var(--themeBlack);
+  color: var(--themeWhite);
+
+  border-bottom: 2px solid var(--themedark2ColorQuaternary);
+}
+
+html.dark2 .customInput:focus {
+  box-shadow: 0 0 0 1px var(--themedark2ColorQuaternary);
+  border-bottom: 3px solid var(--themedark2ColorQuaternary);
+}
+
+html.dark2 .btnDelete::after {
+  background-color: var(--themedark2ColorQuaternary);
+}
+/* dark3 */
+html.dark3 {
+  background: var(--themeBlack);
+  color: var(--themeWhite);
+  transition: all 0.6s ease;
+}
+html.dark3 a {
+  color: var(--themedark3ColorQuaternary);
+}
+
+html.dark3 .contetHeader {
+  border-bottom: 2px solid var(--themedark3ColorTertiary);
+  transition: all 0.6s ease;
+}
+
+html.dark3 .contenedorBtnTemas {
+  border-top: 1px solid var(--themedark3ColorTertiary);
+  border-bottom: 1px solid var(--themedark3ColorTertiary);
+}
+
+html.dark3 .btnMostrarAcciones:after,
+html.dark3 .btnMostrarAcciones::before {
+  background-color: var(--themedark3ColorTertiary);
+}
+
+html.dark3 .contents {
+  background: var(--themedark3ColorPrimary);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.6s ease;
+}
+html.dark3 .headerBoard {
+  background: var(--themedark3ColorSecondary);
+  transition: all 0.6s ease;
+}
+
+html.dark3 .btnSumit::after {
+  border-bottom-color: var(--themedark3ColorTertiary);
+  border-right-color: var(--themedark3ColorTertiary);
+}
+html.dark3 .btnSumit::before {
+  border-top-color: var(--themedark3ColorTertiary);
+  border-left-color: var(--themedark3ColorTertiary);
+}
+
+html.dark3 .customInput {
+  background: var(--themeBlack);
+  border-bottom: 2px solid var(--themedark3ColorTertiary);
+  color: var(--themeWhite);
+}
+
+html.dark3 .customInput:focus {
+  box-shadow: 0 0 0 1px var(--themedark3ColorTertiary);
+  border-bottom: 3px solid var(--themedark3ColorTertiary);
+}
+
+html.dark3 .btnDelete::after {
+  background-color: var(--themedark3ColorTertiary);
+}
+
+@media only screen and (max-width: 600px) {
+  .contenedorBtnTemas {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+    height: 100%;
+  }
+  .heightSettings {
+    height: 300px;
+  }
+  .contendAddControls form {
+    flex-direction: column;
+    row-gap: 2em;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,37 @@
+:root {
+  /* light */
+  --theme1ColorPrimary: #fa7070;
+  --theme1ColorSecondary: #fbf2cf;
+  --theme1ColorTertiary: #c6ebc5;
+  --theme1ColorQuaternary: #a1c298;
+  /* light2 */
+  --themelight2ColorPrimary: #94b49f;
+  --themelight2ColorSecondary: #cee5d0;
+  --themelight2ColorTertiary: #fcf8e8;
+  --themelight2ColorQuaternary: #ecb390;
+  /* light3 */
+  --themelight3ColorPrimary: #ffe6e6;
+  --themelight3ColorSecondary: #f2d1d1;
+  --themelight3ColorTertiary: #daeaf1;
+  --themelight3ColorQuaternary: #c6dce4;
+
+  /* dark */
+  --theme2ColorPrimary: #2c3333;
+  --theme2ColorSecondary: #395b64;
+  --theme2ColorTertiary: #a5c9ca;
+  --theme2ColorQuaternary: #e7f6f2;
+  /* dark2 */
+  --themedark2ColorPrimary: #46244c;
+  --themedark2ColorSecondary: #712b75;
+  --themedark2ColorTertiary: #c74b50;
+  --themedark2ColorQuaternary: #d49b54;
+
+  /* dark3 */
+  --themedark3ColorPrimary: #1f1d36;
+  --themedark3ColorSecondary: #3f3351;
+  --themedark3ColorTertiary: #864879;
+  --themedark3ColorQuaternary: #e9a6a6;
+
+  --themeWhite: rgb(253, 253, 253);
+  --themeBlack: #191919;
+}
